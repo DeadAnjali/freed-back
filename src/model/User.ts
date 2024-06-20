@@ -46,18 +46,16 @@ const UserSchema:Schema<User>=new Schema({
     },
     verifyCode:{
         type:String,
-        required:[true,"Username is required"],
+        required:[true,"verifycode is required"],
         unique:true
     },
     verifyCodeExpiry:{
         type:Date,
-        required:[true,"Username is required"],
-        unique:true
+        required:[true,"verifycodeexp is required"],
     },
     isAcceptingMessage:{
         type:Boolean,
-        required:[true,"Username is required"],
-        unique:true
+        required:[true,"accepting message is required"],
     },
     message:[MessageSchema]
 })
