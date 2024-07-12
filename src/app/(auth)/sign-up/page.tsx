@@ -45,10 +45,12 @@ export default function SignUpForm() {
   useEffect(() => {
     const checkUsernameUnique = async () => {
       if (username) {
+
         setIsCheckingUsername(true);
         setUsernameMessage(''); // Reset message
         try {
           const response = await axios.get<ApiResponse>(
+
             `/api/check-username-unique?username=${username}`
           );
           setUsernameMessage(response.data.message);
