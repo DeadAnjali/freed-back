@@ -20,10 +20,11 @@ import {
 import { Button } from './ui/button';
 import { useToast } from '@/components/ui/use-toast';
 import { ApiResponse } from '@/types/ApiResponse';
+import { stringify } from 'querystring';
 
 type MessageCardProps = {
   message: Message;
-  onMessageDelete: (messageId: string) => void;
+  onMessageDelete: (messageId:any) => void;
 };
 
 export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
